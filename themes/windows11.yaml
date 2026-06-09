@@ -173,7 +173,7 @@ Windows 11:
       ha-dialog-surface-background: 'rgba(249, 249, 249, 0.85)'
 
       # ── Web Awesome surface tokens (drive dropdowns + dialogs Mica fill) ──
-      wa-color-surface-raised:   'rgba(249, 249, 249, 0.97)'   # ← wa-popover (combo-box dropdowns)
+      wa-color-surface-raised:   'rgba(249, 249, 249, 0.92)'   # ← wa-popover (combo-box dropdowns)
       wa-color-surface-default:  'rgba(252, 252, 252, 0.70)'
       wa-color-surface-border:   'rgba(0, 0, 0, 0.1200)'
       wa-shadow-m: '0 8px 16px rgba(0, 0, 0, 0.14), 0 0 1px rgba(0, 0, 0, 0.12)'
@@ -194,7 +194,7 @@ Windows 11:
       # menus get an opaque-enough fill to stay readable over busy content.
       primary-background-color:   '#F3F3F3'
       secondary-background-color: '#EAEAEA'
-      card-background-color:           'rgba(252, 252, 252, 0.97)'   # ← menus
+      card-background-color:           'rgba(252, 252, 252, 0.92)'   # ← menus
       ha-card-background:              'rgba(252, 252, 252, 0.70)'   # ← cards
       paper-card-background-color:     'rgba(252, 252, 252, 0.70)'
       paper-listbox-background-color:  '#FFFFFF'
@@ -366,7 +366,7 @@ Windows 11:
       ha-dialog-surface-background: 'rgba(44, 44, 44, 0.85)'
 
       # ── Web Awesome surface tokens (drive dropdowns + dialogs Mica fill) ──
-      wa-color-surface-raised:   'rgba(44, 44, 44, 0.97)'      # ← wa-popover (combo-box dropdowns)
+      wa-color-surface-raised:   'rgba(44, 44, 44, 0.92)'      # ← wa-popover (combo-box dropdowns)
       wa-color-surface-default:  'rgba(43, 43, 43, 0.60)'
       wa-color-surface-border:   'rgba(255, 255, 255, 0.1800)'
       wa-shadow-m: '0 8px 16px rgba(0, 0, 0, 0.35), 0 0 1px rgba(0, 0, 0, 0.30)'
@@ -387,7 +387,7 @@ Windows 11:
       # menus get an opaque-enough fill to stay readable over busy content.
       primary-background-color:   '#202020'
       secondary-background-color: '#1C1C1C'
-      card-background-color:           'rgba(43, 43, 43, 0.97)'      # ← menus
+      card-background-color:           'rgba(43, 43, 43, 0.92)'      # ← menus
       ha-card-background:              'rgba(43, 43, 43, 0.60)'      # ← cards
       paper-card-background-color:    'rgba(43, 43, 43, 0.60)'
       paper-listbox-background-color: '#2D2D2D'
