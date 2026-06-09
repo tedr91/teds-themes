@@ -194,7 +194,7 @@ Windows 11:
       # menus get an opaque-enough fill to stay readable over busy content.
       primary-background-color:   '#F3F3F3'
       secondary-background-color: '#EAEAEA'
-      card-background-color:           'rgba(252, 252, 252, 0.92)'   # ← menus
+      card-background-color:           'rgba(252, 252, 252, 0.97)'   # ← menus
       ha-card-background:              'rgba(252, 252, 252, 0.70)'   # ← cards
       paper-card-background-color:     'rgba(252, 252, 252, 0.70)'
       paper-listbox-background-color:  '#FFFFFF'
@@ -387,7 +387,7 @@ Windows 11:
       # menus get an opaque-enough fill to stay readable over busy content.
       primary-background-color:   '#202020'
       secondary-background-color: '#1C1C1C'
-      card-background-color:           'rgba(43, 43, 43, 0.92)'      # ← menus
+      card-background-color:           'rgba(43, 43, 43, 0.97)'      # ← menus
       ha-card-background:              'rgba(43, 43, 43, 0.60)'      # ← cards
       paper-card-background-color:    'rgba(43, 43, 43, 0.60)'
       paper-listbox-background-color: '#2D2D2D'
