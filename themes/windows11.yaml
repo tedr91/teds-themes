@@ -304,9 +304,10 @@ Windows 11:
     #  DARK  (Mica Dark — #202020 base, #4CC2FF accent)
     # =========================================================================
     dark:
-      # ── Default dashboard wallpaper (subtle dark Win11 grid pattern) ──
+      # ── Default dashboard wallpaper (Win11 radial blue gradient) ──
+      # Same image as light mode — looks great over both palettes.
       # See the light-mode comment above for details on switching images.
-      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/ha-windows11-theme@main/backgrounds/DarkGreyLittleSquares.jpg")'
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/ha-windows11-theme@main/backgrounds/RadialGradientBlue.jpg")'
 
       # ── HA 2026.x primary color scale (Win11 dark accent at -60) ──
       ha-color-primary-05: '#001D2E'

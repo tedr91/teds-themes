@@ -55,8 +55,7 @@ These surfaces still receive a Mica-style translucent fill via `--ha-dialog-surf
 
 The Mica blur effect on cards only "pops" when there's something interesting behind them. The theme ships **8 Win11-style wallpapers** in the [backgrounds/](backgrounds/) folder, and a sensible default is enabled out of the box:
 
-- **Light mode:** `RadialGradientBlue.jpg` (matches the official Windows 11 default wallpaper feel)
-- **Dark mode:** `DarkGreyLittleSquares.jpg` (subtle dark grid)
+- **Default (both light & dark modes):** `RadialGradientBlue.jpg` (matches the official Windows 11 default wallpaper feel)
 
 Wallpapers are served via the [jsDelivr CDN](https://www.jsdelivr.com/) directly from this repo — **no manual download needed** when installing via HACS. They apply to every dashboard view automatically via the native HA theme variable `lovelace-background`.
 
@@ -67,11 +66,11 @@ Edit [themes/windows11.yaml](themes/windows11.yaml) and change the filename in t
 | Filename | Mood |
 | --- | --- |
 | [`Chain.jpg`](backgrounds/Chain.jpg) | Industrial, monochrome |
-| [`DarkGreyLittleSquares.jpg`](backgrounds/DarkGreyLittleSquares.jpg) | Subtle dark grid (dark default) |
+| [`DarkGreyLittleSquares.jpg`](backgrounds/DarkGreyLittleSquares.jpg) | Subtle dark grid |
 | [`Leaf.jpg`](backgrounds/Leaf.jpg) | Organic green |
 | [`MinimalistMountains.jpg`](backgrounds/MinimalistMountains.jpg) | Soft pastel landscape |
 | [`MountainStream.jpg`](backgrounds/MountainStream.jpg) | Cool blues / nature |
-| [`RadialGradientBlue.jpg`](backgrounds/RadialGradientBlue.jpg) | Win11 hero gradient (light default) |
+| [`RadialGradientBlue.jpg`](backgrounds/RadialGradientBlue.jpg) | Win11 hero gradient (default) |
 | [`Railroad.jpg`](backgrounds/Railroad.jpg) | Linear repeating pattern |
 | [`SunshineThroughMountains.jpg`](backgrounds/SunshineThroughMountains.jpg) | Warm golden hour |
 
