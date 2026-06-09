@@ -73,7 +73,7 @@ Windows 11:
   uix-theme: 'Windows 11'
 
   # uix-root-yaml — traverses to the <home-assistant> shadow root for the
-  # Mica wallpaper backdrop on the whole app shell.
+  # Mica wallpaper backdrop on the whole app shell, plus menu / popover blur.
   uix-root-yaml: |
     .: |
       html {
@@ -88,6 +88,40 @@ Windows 11:
           radial-gradient(at 0% 0%, var(--win11-mica-tint-1) 0%, transparent 50%),
           radial-gradient(at 100% 100%, var(--win11-mica-tint-2) 0%, transparent 50%),
           var(--primary-background-color) !important;
+      }
+    # Modern Material Web 3 menus (HA 2024.5+) — row-action menus, button menus.
+    # The .menu element inside md-menu's shadow root carries the surface fill.
+    ha-md-menu $ md-menu $: |
+      .menu {
+        backdrop-filter: blur(40px) saturate(125%) !important;
+        -webkit-backdrop-filter: blur(40px) saturate(125%) !important;
+        background-color: var(--paper-dialog-background-color) !important;
+        border: 1px solid var(--win11-card-stroke) !important;
+        border-radius: 8px !important;
+        box-shadow:
+          0 8px 16px rgba(0, 0, 0, 0.14),
+          0 0 1px  rgba(0, 0, 0, 0.12) !important;
+      }
+    # Legacy MWC menu surfaces (older components — select dropdowns, etc.)
+    mwc-menu-surface $: |
+      .mdc-menu-surface {
+        backdrop-filter: blur(40px) saturate(125%) !important;
+        -webkit-backdrop-filter: blur(40px) saturate(125%) !important;
+        background-color: var(--paper-dialog-background-color) !important;
+        border: 1px solid var(--win11-card-stroke) !important;
+        border-radius: 8px !important;
+        box-shadow:
+          0 8px 16px rgba(0, 0, 0, 0.14),
+          0 0 1px  rgba(0, 0, 0, 0.12) !important;
+      }
+    # ha-md-button-menu wraps a trigger button + md-menu — pierce one more level.
+    ha-md-button-menu $ ha-md-menu $ md-menu $: |
+      .menu {
+        backdrop-filter: blur(40px) saturate(125%) !important;
+        -webkit-backdrop-filter: blur(40px) saturate(125%) !important;
+        background-color: var(--paper-dialog-background-color) !important;
+        border: 1px solid var(--win11-card-stroke) !important;
+        border-radius: 8px !important;
       }
 
   # uix-card — applied to every card's ha-card element. Plain CSS form
@@ -104,6 +138,19 @@ Windows 11:
     ha-card:hover {
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.06);
     }
+
+  # uix-dialog-yaml — covers ha-dialog / ha-adaptive-dialog surfaces
+  # (more-info, settings popups, confirmation dialogs).
+  uix-dialog-yaml: |
+    .: |
+      ha-dialog, ha-adaptive-dialog {
+        --ha-dialog-surface-background: var(--paper-dialog-background-color);
+        --mdc-dialog-content-background: var(--paper-dialog-background-color);
+        --mdc-theme-surface: var(--paper-dialog-background-color);
+        backdrop-filter: blur(40px) saturate(125%);
+        -webkit-backdrop-filter: blur(40px) saturate(125%);
+        border-radius: 8px;
+      }
 
   # ---------------------------------------------------------------------------
   # 6. Light / Dark token sets
