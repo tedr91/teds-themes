@@ -116,8 +116,9 @@ Apple HIG:
     #  LIGHT  (systemGroupedBackground #F2F2F7, #FFFFFF cards, #007AFF tint)
     # =========================================================================
     light:
-      # ── Solid grouped canvas (no wallpaper — content-first) ──
-      lovelace-background: '#F2F2F7'
+      # ── Default light wallpaper (soft pastel waves) ──
+      # For a solid grouped canvas use '#F2F2F7' instead.
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/apple-hig/apple-hig-light.webp")'
 
       # ── Apple system blue ramp ──
       ha-color-primary-05: '#002D82'
@@ -301,8 +302,9 @@ Apple HIG:
     #  DARK  (systemBackground #000000, #1C1C1E cards, #0A84FF tint)
     # =========================================================================
     dark:
-      # ── Solid system canvas (no wallpaper) ──
-      lovelace-background: '#000000'
+      # ── Default dark wallpaper (3D purple/blue wave) ──
+      # For a solid system canvas use '#000000' instead.
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/apple-hig/apple-hig-dark.webp")'
 
       # ── Apple system blue ramp (shared; dark tint = blue.500 dark) ──
       ha-color-primary-05: '#002D82'

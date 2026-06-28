@@ -115,8 +115,9 @@ Google Material 3:
     #  LIGHT  (M3 baseline light — surface-container canvas, #6750A4 primary)
     # =========================================================================
     light:
-      # ── Solid M3 surface-container canvas (no wallpaper) ──
-      lovelace-background: '#F3EDF7'
+      # ── Default light wallpaper (colorful M3 geometric shapes) ──
+      # For a solid surface-container canvas use '#F3EDF7' instead.
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/google-material-3/google-material-3-light.webp")'
 
       # ── M3 primary tonal palette (baseline purple seed) ──
       ha-color-primary-05: '#1A0049'
@@ -300,8 +301,9 @@ Google Material 3:
     #  DARK  (M3 baseline dark — surface #1C1B1F, #D0BCFF primary)
     # =========================================================================
     dark:
-      # ── Solid M3 surface canvas (no wallpaper) ──
-      lovelace-background: '#1C1B1F'
+      # ── Default dark wallpaper (vibrant tonal gradient) ──
+      # For a solid M3 surface canvas use '#1C1B1F' instead.
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/google-material-3/google-material-3-dark.webp")'
 
       # ── M3 primary tonal palette (shared absolute palette) ──
       ha-color-primary-05: '#1A0049'

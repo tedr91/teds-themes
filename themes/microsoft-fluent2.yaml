@@ -115,8 +115,9 @@ Microsoft Fluent 2:
     #  LIGHT  (Fluent neutral #F5F5F5 canvas, #FFFFFF cards, #0F6CBD brand)
     # =========================================================================
     light:
-      # ── Solid neutral canvas (no wallpaper — Fluent is content-first/flat) ──
-      lovelace-background: '#F5F5F5'
+      # ── Default light wallpaper (neutral concrete gradient) ──
+      # Fluent is flat by design; for a solid canvas use '#F5F5F5' instead.
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/microsoft-fluent2/microsoft-fluent2-light.webp")'
 
       # ── Fluent brand ramp (default communication blue, shades 10–160) ──
       ha-color-primary-05: '#061724'
@@ -300,8 +301,9 @@ Microsoft Fluent 2:
     #  DARK  (Fluent neutral #1F1F1F canvas, #292929 cards, #479EF5 brand)
     # =========================================================================
     dark:
-      # ── Solid neutral canvas (no wallpaper) ──
-      lovelace-background: '#1F1F1F'
+      # ── Default dark wallpaper (dark-grey brushstroke) ──
+      # For a solid canvas use '#1F1F1F' instead.
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/microsoft-fluent2/microsoft-fluent2-dark.webp")'
 
       # ── Fluent brand ramp (shared absolute ramp; dark fill = shade 100) ──
       ha-color-primary-05: '#061724'

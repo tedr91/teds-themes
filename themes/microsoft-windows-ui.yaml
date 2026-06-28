@@ -131,12 +131,11 @@ Microsoft Windows UI:
       # https://github.com/home-assistant/frontend/blob/dev/src/panels/lovelace/views/hui-view-background.ts
       #
       # Images are served via jsDelivr CDN from this repo's `backgrounds/` folder.
-      # To use one of the other 7 bundled images, change the filename below to:
-      #   Leaf.jpg | MinimalistMountains.jpg | MountainStream.jpg |
-      #   SunshineThroughMountains.jpg | Railroad.jpg | Chain.jpg |
-      #   DarkGreyLittleSquares.jpg | RadialGradientBlue.jpg
+      # This theme's default light wallpaper lives in `backgrounds/microsoft-windows-ui/`.
+      # The 8 original Win11-style wallpapers now live in `backgrounds/general/`
+      #   (e.g. general/RadialGradientBlue.jpg | general/MountainStream.jpg | …).
       # Or point at any URL / /local/... path on your HA instance.
-      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/RadialGradientBlue.jpg")'
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/microsoft-windows-ui/microsoft-windows-ui-light.webp")'
 
       # ── HA 2026.x primary color scale (Win11 default blue at -40) ──
       ha-color-primary-05: '#001D2E'
@@ -326,10 +325,10 @@ Microsoft Windows UI:
     #  DARK  (Mica Dark — #202020 base, #4CC2FF accent)
     # =========================================================================
     dark:
-      # ── Default dashboard wallpaper (Win11 radial blue gradient) ──
-      # Same image as light mode — looks great over both palettes.
+      # ── Default dashboard wallpaper (deep-blue dark variant) ──
+      # Dark-mode wallpaper in `backgrounds/microsoft-windows-ui/`.
       # See the light-mode comment above for details on switching images.
-      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/RadialGradientBlue.jpg")'
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/microsoft-windows-ui/microsoft-windows-ui-dark.webp")'
 
       # ── HA 2026.x primary color scale (Win11 dark accent at -60) ──
       ha-color-primary-05: '#001D2E'

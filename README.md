@@ -39,7 +39,7 @@ Four native Home Assistant themes that recreate the world's major UI design lang
 3. Restart Home Assistant (**Developer Tools → YAML → Restart**, or full restart).
 4. Select your theme in your Profile as above.
 
-> **Tip:** The **Microsoft Windows UI** theme's Mica blur on cards looks best over a wallpaper (one is enabled by default). The **Microsoft Fluent 2**, **Apple HIG**, and **Google Material 3** themes are intentionally flat/solid and need no wallpaper.
+> **Tip:** Every theme ships its own **light + dark wallpaper**, enabled by default. The **Microsoft Windows UI** and **Apple HIG** themes use translucency, so their Mica/glass blur looks best over the wallpaper; **Microsoft Fluent 2** and **Google Material 3** keep solid, opaque cards on top. To go fully flat, set `lovelace-background` to a solid color (see Backgrounds below).
 
 ---
 
@@ -57,41 +57,48 @@ To compensate, these themes make the menu surface highly opaque (instead of a tr
 
 ---
 
-## Backgrounds (wallpaper) — Microsoft Windows UI
+## Backgrounds (wallpaper)
 
-The Mica blur effect on cards only "pops" when there's something interesting behind them. The **Microsoft Windows UI** theme ships **8 Win11-style wallpapers** in the [backgrounds/](backgrounds/) folder, and a sensible default is enabled out of the box. (The Fluent 2, Apple HIG, and Material 3 themes are solid by design, but you can add a wallpaper to them the same way.)
+Every theme ships its **own light + dark wallpaper**, enabled by default and matched to that design language. Each theme's pair lives in its own folder under [backgrounds/](backgrounds/):
 
-- **Default (both light & dark modes):** `RadialGradientBlue.jpg` (matches the official Windows 11 default wallpaper feel)
+| Theme | Folder | Light | Dark |
+| --- | --- | --- | --- |
+| Microsoft Windows UI | [microsoft-windows-ui/](backgrounds/microsoft-windows-ui/) | smooth blue flow | liquid blue waves |
+| Microsoft Fluent 2 | [microsoft-fluent2/](backgrounds/microsoft-fluent2/) | neutral concrete | dark-grey brushstroke |
+| Apple HIG | [apple-hig/](backgrounds/apple-hig/) | pastel waves | 3D purple/blue wave |
+| Google Material 3 | [google-material-3/](backgrounds/google-material-3/) | geometric shapes | tonal gradient |
+
+A shared library of **8 Win11-style wallpapers** also ships in [backgrounds/general/](backgrounds/general/) for use with any theme.
 
 Wallpapers are served via the [jsDelivr CDN](https://www.jsdelivr.com/) directly from this repo — **no manual download needed** when installing via HACS. They apply to every dashboard view automatically via the native HA theme variable `lovelace-background`.
 
 ### Switching to a different bundled wallpaper
 
-Edit [themes/microsoft-windows-ui.yaml](themes/microsoft-windows-ui.yaml) and change the filename in the `lovelace-background` line under the `light:` or `dark:` block. Bundled options (preview each by clicking):
+Edit the theme file in [themes/](themes/) (e.g. [themes/microsoft-windows-ui.yaml](themes/microsoft-windows-ui.yaml)) and change the filename in the `lovelace-background` line under the `light:` or `dark:` block. The shared `general/` library (preview each by clicking):
 
 | Filename | Mood |
 | --- | --- |
-| [`Chain.jpg`](backgrounds/Chain.jpg) | Industrial, monochrome |
-| [`DarkGreyLittleSquares.jpg`](backgrounds/DarkGreyLittleSquares.jpg) | Subtle dark grid |
-| [`Leaf.jpg`](backgrounds/Leaf.jpg) | Organic green |
-| [`MinimalistMountains.jpg`](backgrounds/MinimalistMountains.jpg) | Soft pastel landscape |
-| [`MountainStream.jpg`](backgrounds/MountainStream.jpg) | Cool blues / nature |
-| [`RadialGradientBlue.jpg`](backgrounds/RadialGradientBlue.jpg) | Win11 hero gradient (default) |
-| [`Railroad.jpg`](backgrounds/Railroad.jpg) | Linear repeating pattern |
-| [`SunshineThroughMountains.jpg`](backgrounds/SunshineThroughMountains.jpg) | Warm golden hour |
+| [`Chain.jpg`](backgrounds/general/Chain.jpg) | Industrial, monochrome |
+| [`DarkGreyLittleSquares.jpg`](backgrounds/general/DarkGreyLittleSquares.jpg) | Subtle dark grid |
+| [`Leaf.jpg`](backgrounds/general/Leaf.jpg) | Organic green |
+| [`MinimalistMountains.jpg`](backgrounds/general/MinimalistMountains.jpg) | Soft pastel landscape |
+| [`MountainStream.jpg`](backgrounds/general/MountainStream.jpg) | Cool blues / nature |
+| [`RadialGradientBlue.jpg`](backgrounds/general/RadialGradientBlue.jpg) | Win11 hero gradient |
+| [`Railroad.jpg`](backgrounds/general/Railroad.jpg) | Linear repeating pattern |
+| [`SunshineThroughMountains.jpg`](backgrounds/general/SunshineThroughMountains.jpg) | Warm golden hour |
 
 For example to use `MountainStream.jpg` in dark mode:
 
 ```yaml
 dark:
-  lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/MountainStream.jpg")'
+  lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/general/MountainStream.jpg")'
 ```
 
 ### Using local copies (faster, works offline)
 
 If you'd rather host the images locally:
 
-1. Download the desired image(s) from the [backgrounds/](backgrounds/) folder
+1. Download the desired image(s) from the [backgrounds/](backgrounds/) folder (theme subfolders, or the shared `general/` set)
 2. Place them in your Home Assistant `config/www/backgrounds/` folder (create it if it doesn't exist)
 3. Replace the URL in the theme with the `/local/...` path:
 
@@ -164,7 +171,12 @@ teds-themes/
 │   ├── microsoft-fluent2.yaml      ← Microsoft Fluent 2 (flat, solid)
 │   ├── apple-hig.yaml              ← Apple HIG (grouped, SF Pro)
 │   └── google-material-3.yaml      ← Google Material 3 (tonal, Roboto)
-├── backgrounds/                    ← bundled Win11-style wallpapers (served via jsDelivr CDN)
+├── backgrounds/                    ← wallpapers (served via jsDelivr CDN)
+│   ├── general/                    ← 8 shared Win11-style wallpapers
+│   ├── microsoft-windows-ui/       ← Windows UI light + dark
+│   ├── microsoft-fluent2/          ← Fluent 2 light + dark
+│   ├── apple-hig/                  ← Apple HIG light + dark
+│   └── google-material-3/          ← Material 3 light + dark
 ├── design-guides/                  ← Fluent 2, Apple HIG & Material 3 reference specs
 ├── README.md
 ├── LICENSE
