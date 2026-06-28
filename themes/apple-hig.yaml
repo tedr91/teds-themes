@@ -64,7 +64,7 @@ Apple HIG:
   #    radius.md 10 (controls) · radius.lg 12 (cards) · sheet 14 (dialogs)
   # ---------------------------------------------------------------------------
   ha-border-radius-sm:  '6px'
-  ha-border-radius-md:  '8px'
+  ha-border-radius-md:  '10px'   # radius.md — controls (buttons, inputs)
   ha-border-radius-lg:  '12px'   # radius.lg — cards / grouped sections
   ha-border-radius-xl:  '14px'
   ha-border-radius-2xl: '20px'   # radius.2xl — sheets / large panels

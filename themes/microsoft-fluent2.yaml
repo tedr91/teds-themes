@@ -4,7 +4,7 @@
 #  The cross-platform Fluent 2 design system used in Microsoft 365, Teams and
 #  the web — NOT the Windows 11 desktop shell. Flat, solid neutral surfaces
 #  (no Mica/Acrylic), the Fluent brand blue (#0F6CBD light / #479EF5 dark),
-#  Segoe UI, a 6 px card / 4 px control radius, and Fluent elevation shadows.
+#  Segoe UI, a 4 px card / control radius, and Fluent elevation shadows.
 #
 #  Native HA 2026.x theme — no UIX or card-mod required.
 #  Single theme with `modes:` so HA's "Auto" theme mode follows the OS.
@@ -61,22 +61,22 @@ Microsoft Fluent 2:
 
   # ---------------------------------------------------------------------------
   # 2. Fluent 2 corner-radius system
-  #    borderRadiusMedium 4 (controls) · Large 6 (cards) · XLarge 8 (dialogs)
+  #    borderRadiusMedium 4 (controls + cards) · Large 6 · XLarge 8 (dialogs)
   # ---------------------------------------------------------------------------
   ha-border-radius-sm:  '2px'   # borderRadiusSmall
-  ha-border-radius-md:  '4px'   # borderRadiusMedium (buttons, inputs)
-  ha-border-radius-lg:  '6px'   # borderRadiusLarge  (cards)
+  ha-border-radius-md:  '4px'   # borderRadiusMedium (buttons, inputs, cards)
+  ha-border-radius-lg:  '6px'   # borderRadiusLarge
   ha-border-radius-xl:  '8px'   # borderRadiusXLarge (panels, dialogs)
   ha-border-radius-2xl: '8px'
   ha-border-radius-3xl: '8px'
   # Component-specific radius overrides
-  ha-card-border-radius:   '6px'
+  ha-card-border-radius:   '4px'
   ha-dialog-border-radius: '8px'
   # Legacy aliases
   mdc-shape-small:    '4px'
   mdc-shape-medium:   '6px'
   mdc-shape-large:    '8px'
-  border-radius-card:   '6px'
+  border-radius-card:   '4px'
   border-radius-button: '4px'
   border-radius-chip:   '4px'
 

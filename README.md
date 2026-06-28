@@ -5,7 +5,7 @@ Four native Home Assistant themes that recreate the world's major UI design lang
 | Theme | Design language | Look | Accent (light / dark) |
 | --- | --- | --- | --- |
 | **Microsoft Windows UI** | Windows 11 desktop (Fluent Design) | Mica/Acrylic translucency, Segoe UI Variable, 8 px cards, wallpaper | `#0078D4` / `#4CC2FF` |
-| **Microsoft Fluent 2** | Fluent 2 (Microsoft 365 / Teams / web) | Flat, solid neutral surfaces, Segoe UI, 6 px cards | `#0F6CBD` / `#479EF5` |
+| **Microsoft Fluent 2** | Fluent 2 (Microsoft 365 / Teams / web) | Flat, solid neutral surfaces, Segoe UI, 4 px cards | `#0F6CBD` / `#479EF5` |
 | **Apple HIG** | Apple Human Interface Guidelines (iOS / macOS) | Grouped surfaces, SF Pro, 12 px cards, system blue | `#007AFF` / `#0A84FF` |
 | **Google Material 3** | Material Design 3 / Material You | Tonal surfaces, Roboto / Google Sans, 12 px cards, 28 px dialogs, pill buttons | `#6750A4` / `#D0BCFF` |
 
@@ -95,7 +95,7 @@ Every theme ships its **own light + dark wallpaper**, enabled by default and mat
 | Apple HIG | [apple-hig/](backgrounds/apple-hig/) | pastel waves | 3D purple/blue wave |
 | Google Material 3 | [google-material-3/](backgrounds/google-material-3/) | geometric shapes | tonal gradient |
 
-A shared library of **8 Win11-style wallpapers** also ships in [backgrounds/general/](backgrounds/general/) for use with any theme.
+A shared library of **7 Win11-style wallpapers** also ships in [backgrounds/general/](backgrounds/general/) for use with any theme.
 
 Wallpapers are served via the [jsDelivr CDN](https://www.jsdelivr.com/) directly from this repo — **no manual download needed** when installing via HACS. They apply to every dashboard view automatically via the native HA theme variable `lovelace-background`.
 
@@ -105,20 +105,19 @@ Edit the theme file in [themes/](themes/) (e.g. [themes/microsoft-windows-ui.yam
 
 | Filename | Mood |
 | --- | --- |
-| [`Chain.jpg`](backgrounds/general/Chain.jpg) | Industrial, monochrome |
-| [`DarkGreyLittleSquares.jpg`](backgrounds/general/DarkGreyLittleSquares.jpg) | Subtle dark grid |
-| [`Leaf.jpg`](backgrounds/general/Leaf.jpg) | Organic green |
-| [`MinimalistMountains.jpg`](backgrounds/general/MinimalistMountains.jpg) | Soft pastel landscape |
-| [`MountainStream.jpg`](backgrounds/general/MountainStream.jpg) | Cool blues / nature |
-| [`RadialGradientBlue.jpg`](backgrounds/general/RadialGradientBlue.jpg) | Win11 hero gradient |
-| [`Railroad.jpg`](backgrounds/general/Railroad.jpg) | Linear repeating pattern |
-| [`SunshineThroughMountains.jpg`](backgrounds/general/SunshineThroughMountains.jpg) | Warm golden hour |
+| [`Chain.webp`](backgrounds/general/Chain.webp) | Industrial, monochrome |
+| [`Leaf.webp`](backgrounds/general/Leaf.webp) | Organic green |
+| [`MinimalistMountains.webp`](backgrounds/general/MinimalistMountains.webp) | Soft pastel landscape |
+| [`MountainStream.webp`](backgrounds/general/MountainStream.webp) | Cool blues / nature |
+| [`RadialGradientBlue.webp`](backgrounds/general/RadialGradientBlue.webp) | Win11 hero gradient |
+| [`Railroad.webp`](backgrounds/general/Railroad.webp) | Linear repeating pattern |
+| [`SunshineThroughMountains.webp`](backgrounds/general/SunshineThroughMountains.webp) | Warm golden hour |
 
-For example to use `MountainStream.jpg` in dark mode:
+For example to use `MountainStream.webp` in dark mode:
 
 ```yaml
 dark:
-  lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/general/MountainStream.jpg")'
+  lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/general/MountainStream.webp")'
 ```
 
 ### Using local copies (faster, works offline)
@@ -131,7 +130,7 @@ If you'd rather host the images locally:
 
    ```yaml
    light:
-     lovelace-background: 'center / cover no-repeat fixed url("/local/backgrounds/RadialGradientBlue.jpg")'
+     lovelace-background: 'center / cover no-repeat fixed url("/local/backgrounds/RadialGradientBlue.webp")'
    ```
 
 4. Reload themes (Developer Tools → YAML → **Reload Themes**)
@@ -153,7 +152,7 @@ Any view can override the theme-level wallpaper using the standard HA view backg
 views:
   - title: Bedroom
     background:
-      image: /local/backgrounds/MountainStream.jpg
+      image: /local/backgrounds/MountainStream.webp
       size: cover
       alignment: center
       attachment: fixed
@@ -199,7 +198,7 @@ teds-themes/
 │   ├── apple-hig.yaml              ← Apple HIG (grouped, SF Pro)
 │   └── google-material-3.yaml      ← Google Material 3 (tonal, Roboto)
 ├── backgrounds/                    ← wallpapers (served via jsDelivr CDN)
-│   ├── general/                    ← 8 shared Win11-style wallpapers
+│   ├── general/                    ← 7 shared Win11-style wallpapers
 │   ├── microsoft-windows-ui/       ← Windows UI light + dark
 │   ├── microsoft-fluent2/          ← Fluent 2 light + dark
 │   ├── apple-hig/                  ← Apple HIG light + dark

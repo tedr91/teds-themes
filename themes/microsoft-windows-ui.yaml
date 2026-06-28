@@ -90,7 +90,7 @@ Microsoft Windows UI:
   #    `--ha-card-backdrop-filter` (no UIX required); thin Win11 stroke;
   #    soft Win11 elevation.
   # ---------------------------------------------------------------------------
-  ha-card-backdrop-filter: 'blur(40px) saturate(125%)'
+  ha-card-backdrop-filter: 'blur(22px) saturate(125%)'
   ha-card-border-width: '1px'
   ha-card-box-shadow: '0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.04)'
   # (ha-card-border-color is left unset so HA's default falls back to
@@ -133,7 +133,7 @@ Microsoft Windows UI:
       # Images are served via jsDelivr CDN from this repo's `backgrounds/` folder.
       # This theme's default light wallpaper lives in `backgrounds/microsoft-windows-ui/`.
       # The 8 original Win11-style wallpapers now live in `backgrounds/general/`
-      #   (e.g. general/RadialGradientBlue.jpg | general/MountainStream.jpg | …).
+      #   (e.g. general/RadialGradientBlue.webp | general/MountainStream.webp | …).
       # Or point at any URL / /local/... path on your HA instance.
       lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/microsoft-windows-ui/microsoft-windows-ui-light.webp")'
 
@@ -197,8 +197,8 @@ Microsoft Windows UI:
       primary-background-color:   '#F3F3F3'
       secondary-background-color: '#EAEAEA'
       card-background-color:           'rgba(252, 252, 252, 0.92)'   # ← menus
-      ha-card-background:              'rgba(252, 252, 252, 0.70)'   # ← cards
-      paper-card-background-color:     'rgba(252, 252, 252, 0.70)'
+      ha-card-background:              'rgba(252, 252, 252, 0.55)'   # ← cards
+      paper-card-background-color:     'rgba(252, 252, 252, 0.55)'
       paper-listbox-background-color:  '#FFFFFF'
       paper-dialog-background-color:   'rgba(249, 249, 249, 0.85)'
       rgb-primary-background-color:   '243, 243, 243'
@@ -390,8 +390,8 @@ Microsoft Windows UI:
       primary-background-color:   '#202020'
       secondary-background-color: '#1C1C1C'
       card-background-color:           'rgba(43, 43, 43, 0.92)'      # ← menus
-      ha-card-background:              'rgba(43, 43, 43, 0.60)'      # ← cards
-      paper-card-background-color:    'rgba(43, 43, 43, 0.60)'
+      ha-card-background:              'rgba(43, 43, 43, 0.45)'      # ← cards
+      paper-card-background-color:    'rgba(43, 43, 43, 0.45)'
       paper-listbox-background-color: '#2D2D2D'
       paper-dialog-background-color:  'rgba(44, 44, 44, 0.85)'
       rgb-primary-background-color:   '32, 32, 32'
