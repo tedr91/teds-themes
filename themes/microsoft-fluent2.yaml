@@ -15,7 +15,7 @@
 #  - Radii (4/6/8 px) = borderRadiusMedium / Large / XLarge.
 #  - Shadows = Fluent shadow2 (cards) / shadow16 (menus) / shadow28 (dialogs).
 #
-#  Unlike the Microsoft Windows UI theme, Fluent 2 surfaces are fully OPAQUE.
+#  Unlike the Microsoft Windows 11 theme, Fluent 2 surfaces are fully OPAQUE.
 #  Fluent 2 expresses hierarchy through neutral background steps and crisp
 #  elevation shadows rather than translucency, so there is intentionally no
 #  backdrop blur and no wallpaper here.

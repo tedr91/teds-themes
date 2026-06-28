@@ -1,5 +1,5 @@
 # =============================================================================
-#  Microsoft Windows UI — Home Assistant Theme
+#  Microsoft Windows 11 — Home Assistant Theme
 #
 #  The Windows 11 desktop look: Mica/Acrylic translucency, Segoe UI Variable,
 #  8 px radius, and the Windows accent blue.
@@ -25,7 +25,7 @@
 #  translucent Mica-style fill but NOT a true frosted blur. Cards do.
 # =============================================================================
 
-Microsoft Windows UI:
+Microsoft Windows 11:
   # ---------------------------------------------------------------------------
   # 1. Typography — Segoe UI Variable (Win11), graceful fallbacks elsewhere
   # ---------------------------------------------------------------------------
@@ -131,11 +131,11 @@ Microsoft Windows UI:
       # https://github.com/home-assistant/frontend/blob/dev/src/panels/lovelace/views/hui-view-background.ts
       #
       # Images are served via jsDelivr CDN from this repo's `backgrounds/` folder.
-      # This theme's default light wallpaper lives in `backgrounds/microsoft-windows-ui/`.
+      # This theme's default light wallpaper lives in `backgrounds/microsoft-windows-11/`.
       # The 8 original Win11-style wallpapers now live in `backgrounds/general/`
       #   (e.g. general/RadialGradientBlue.webp | general/MountainStream.webp | …).
       # Or point at any URL / /local/... path on your HA instance.
-      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/microsoft-windows-ui/microsoft-windows-ui-light.webp")'
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/microsoft-windows-11/microsoft-windows-11-light.webp")'
 
       # ── HA 2026.x primary color scale (Win11 default blue at -40) ──
       ha-color-primary-05: '#001D2E'
@@ -326,9 +326,9 @@ Microsoft Windows UI:
     # =========================================================================
     dark:
       # ── Default dashboard wallpaper (deep-blue dark variant) ──
-      # Dark-mode wallpaper in `backgrounds/microsoft-windows-ui/`.
+      # Dark-mode wallpaper in `backgrounds/microsoft-windows-11/`.
       # See the light-mode comment above for details on switching images.
-      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/microsoft-windows-ui/microsoft-windows-ui-dark.webp")'
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/microsoft-windows-11/microsoft-windows-11-dark.webp")'
 
       # ── HA 2026.x primary color scale (Win11 dark accent at -60) ──
       ha-color-primary-05: '#001D2E'

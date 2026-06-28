@@ -1,27 +1,28 @@
 # =============================================================================
-#  Apple HIG — Home Assistant Theme
+#  Apple macOS 26 (Tahoe) — Home Assistant Theme
 #
-#  Modeled on Apple's Human Interface Guidelines (iOS 18 / macOS Sequoia):
+#  Modeled on Apple's macOS 26 "Tahoe" / Liquid Glass design language:
 #  SF Pro typography, the system blue tint (#007AFF light / #0A84FF dark),
-#  grouped-list surfaces, generous 12 px card corners, soft shadows in light
-#  mode, and "elevation through lightness" in dark mode.
+#  grouped-list surfaces, rounder "concentric" corners (16 px cards, capsule
+#  buttons), translucent glass chrome, and "elevation through lightness" in dark.
 #
 #  Native HA 2026.x theme — no UIX or card-mod required.
 #  Single theme with `modes:` so HA's "Auto" theme mode follows the OS.
 #
-#  Token values are taken directly from the Apple HIG design specification:
-#  - Tint = system blue (primitive.blue.500).
+#  Token values follow Apple's HIG + Liquid Glass guidance:
+#  - Tint = system blue (primitive.blue.500); vibrant on materials.
 #  - Surfaces = systemGroupedBackground hierarchy (page → card → inner).
 #  - Labels/separators = Apple semantic label & separator opacities.
-#  - Radii (10/12/14 px) = radius.md (controls) / lg (cards) / sheet.
+#  - Radii: controls 12 / cards 16 / sheets 20 px; buttons & chips = capsule.
 #
-#  Apple expresses depth with materials (translucency + blur) on CHROME
-#  (sidebar, header, dialogs) while keeping CONTENT cards solid and grouped.
-#  Shadows are active in light mode and removed in dark mode, where the
-#  background-lightness step (#000 page → #1C1C1E card) conveys elevation.
+#  Liquid Glass is a CHROME material: the sidebar, header, dialogs and popovers
+#  are translucent glass that floats over content, while CONTENT cards stay on
+#  solid (standard) materials — per Apple's "don't use Liquid Glass in the
+#  content layer" guidance. Shadows are active in light mode and removed in
+#  dark, where the lightness step (#000 page -> #1C1C1E card) conveys elevation.
 # =============================================================================
 
-Apple HIG:
+Apple macOS 26:
   # ---------------------------------------------------------------------------
   # 1. Typography — SF Pro via -apple-system, graceful fallbacks elsewhere
   # ---------------------------------------------------------------------------
@@ -60,30 +61,30 @@ Apple HIG:
   paper-font-title_-_line-height: '28px'
 
   # ---------------------------------------------------------------------------
-  # 2. Apple corner-radius system
-  #    radius.md 10 (controls) · radius.lg 12 (cards) · sheet 14 (dialogs)
+  # 2. macOS 26 Tahoe corner-radius system — rounder, "concentric"
+  #    controls 12 · cards 16 · sheets 20 px · buttons & chips = capsule
   # ---------------------------------------------------------------------------
-  ha-border-radius-sm:  '6px'
-  ha-border-radius-md:  '10px'   # radius.md — controls (buttons, inputs)
-  ha-border-radius-lg:  '12px'   # radius.lg — cards / grouped sections
-  ha-border-radius-xl:  '14px'
-  ha-border-radius-2xl: '20px'   # radius.2xl — sheets / large panels
-  ha-border-radius-3xl: '28px'
+  ha-border-radius-sm:  '8px'
+  ha-border-radius-md:  '12px'   # controls (inputs, small surfaces)
+  ha-border-radius-lg:  '16px'   # cards / grouped sections
+  ha-border-radius-xl:  '20px'
+  ha-border-radius-2xl: '26px'   # sheets / large panels
+  ha-border-radius-3xl: '34px'
   # Component-specific radius overrides
-  ha-card-border-radius:   '12px'
-  ha-dialog-border-radius: '14px'
+  ha-card-border-radius:   '16px'
+  ha-dialog-border-radius: '20px'
   # Legacy aliases
-  mdc-shape-small:    '8px'
-  mdc-shape-medium:   '12px'
-  mdc-shape-large:    '14px'
-  border-radius-card:   '12px'
-  border-radius-button: '10px'   # radius.md — default control
-  border-radius-chip:   '8px'
+  mdc-shape-small:    '10px'
+  mdc-shape-medium:   '16px'
+  mdc-shape-large:    '20px'
+  border-radius-card:   '16px'
+  border-radius-button: '980px'  # capsule — Tahoe pill buttons
+  border-radius-chip:   '980px'  # capsule chips
 
   # ---------------------------------------------------------------------------
-  # 3. Card geometry — SOLID grouped surface (no blur on content); subtle
-  #    hairline border; soft Apple shadow in light mode (removed in dark via
-  #    the dark mode override below).
+  # 3. Card geometry — SOLID grouped surface (content layer keeps standard
+  #    materials, NOT Liquid Glass, per Apple); subtle hairline border; soft
+  #    Apple shadow in light mode (removed in dark via the dark override below).
   # ---------------------------------------------------------------------------
   ha-card-backdrop-filter: 'none'
   ha-card-border-width: '1px'
@@ -91,10 +92,10 @@ Apple HIG:
   # (ha-card-border-color falls back to --divider-color, set per mode below.)
 
   # ---------------------------------------------------------------------------
-  # 4. Dialogs & popovers — Apple vibrancy (translucent + blur), like iOS
-  #    sheets and alerts. Surface fill is set per mode below.
+  # 4. Dialogs, popovers & menus — Liquid Glass (regular variant): translucent
+  #    + blur, like macOS / iOS sheets and alerts. Surface fill set per mode.
   # ---------------------------------------------------------------------------
-  ha-dialog-surface-backdrop-filter: 'saturate(180%) blur(20px)'
+  ha-dialog-surface-backdrop-filter: 'saturate(180%) blur(24px)'
   ha-dialog-scrim-backdrop-filter: 'blur(4px)'
 
   # Apple elevation — soft, diffuse shadows for menus and popovers.
@@ -118,7 +119,7 @@ Apple HIG:
     light:
       # ── Default light wallpaper (soft pastel waves) ──
       # For a solid grouped canvas use '#F2F2F7' instead.
-      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/apple-hig/apple-hig-light.webp")'
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/apple-macos-26/apple-macos-26-light.webp")'
 
       # ── Apple system blue ramp ──
       ha-color-primary-05: '#002D82'
@@ -204,16 +205,16 @@ Apple HIG:
       rgb-state-icon-color:        '60, 60, 67'
       rgb-state-icon-active-color: '0, 122, 255'
 
-      # Sidebar (Apple sidebar material)
-      sidebar-background-color:           'rgba(242, 242, 247, 0.80)'
+      # Sidebar (Liquid Glass — translucent chrome)
+      sidebar-background-color:           'rgba(242, 242, 247, 0.72)'
       sidebar-icon-color:                 'rgba(60, 60, 67, 0.60)'
       sidebar-text-color:                 '#1C1C1E'
       sidebar-selected-background-color:  'rgba(0, 122, 255, 0.12)'
       sidebar-selected-icon-color:        '#007AFF'
       sidebar-selected-text-color:        '#007AFF'
 
-      # App header (Apple navigation-bar material)
-      app-header-background-color: 'rgba(249, 249, 251, 0.80)'
+      # App header (Liquid Glass — translucent chrome)
+      app-header-background-color: 'rgba(249, 249, 251, 0.72)'
       app-header-text-color:       '#1C1C1E'
       app-header-edit-background-color: '#E5E5EA'
 
@@ -304,7 +305,7 @@ Apple HIG:
     dark:
       # ── Default dark wallpaper (3D purple/blue wave) ──
       # For a solid system canvas use '#000000' instead.
-      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/apple-hig/apple-hig-dark.webp")'
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/apple-macos-26/apple-macos-26-dark.webp")'
 
       # ── Apple system blue ramp (shared; dark tint = blue.500 dark) ──
       ha-color-primary-05: '#002D82'
@@ -393,16 +394,16 @@ Apple HIG:
       rgb-state-icon-color:        '235, 235, 245'
       rgb-state-icon-active-color: '10, 132, 255'
 
-      # Sidebar (Apple sidebar material)
-      sidebar-background-color:           'rgba(28, 28, 30, 0.80)'
+      # Sidebar (Liquid Glass — translucent chrome)
+      sidebar-background-color:           'rgba(28, 28, 30, 0.72)'
       sidebar-icon-color:                 'rgba(235, 235, 245, 0.60)'
       sidebar-text-color:                 '#FFFFFF'
       sidebar-selected-background-color:  'rgba(10, 132, 255, 0.24)'
       sidebar-selected-icon-color:        '#0A84FF'
       sidebar-selected-text-color:        '#0A84FF'
 
-      # App header (Apple navigation-bar material)
-      app-header-background-color: 'rgba(0, 0, 0, 0.80)'
+      # App header (Liquid Glass — translucent chrome)
+      app-header-background-color: 'rgba(0, 0, 0, 0.72)'
       app-header-text-color:       '#FFFFFF'
       app-header-edit-background-color: '#1C1C1E'
 

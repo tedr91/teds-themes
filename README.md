@@ -4,12 +4,12 @@ Four native Home Assistant themes that recreate the world's major UI design lang
 
 | Theme | Design language | Look | Accent (light / dark) |
 | --- | --- | --- | --- |
-| **Microsoft Windows UI** | Windows 11 desktop (Fluent Design) | Mica/Acrylic translucency, Segoe UI Variable, 8 px cards, wallpaper | `#0078D4` / `#4CC2FF` |
+| **Microsoft Windows 11** | Windows 11 desktop (Fluent Design) | Mica/Acrylic translucency, Segoe UI Variable, 8 px cards, wallpaper | `#0078D4` / `#4CC2FF` |
 | **Microsoft Fluent 2** | Fluent 2 (Microsoft 365 / Teams / web) | Flat, solid neutral surfaces, Segoe UI, 4 px cards | `#0F6CBD` / `#479EF5` |
-| **Apple HIG** | Apple Human Interface Guidelines (iOS / macOS) | Grouped surfaces, SF Pro, 12 px cards, system blue | `#007AFF` / `#0A84FF` |
+| **Apple macOS 26** | macOS 26 "Tahoe" (Liquid Glass) | Glassy chrome, solid grouped cards, SF Pro, 16 px cards, capsule buttons | `#007AFF` / `#0A84FF` |
 | **Google Material 3** | Material Design 3 / Material You | Tonal surfaces, Roboto / Google Sans, 12 px cards, 28 px dialogs, pill buttons | `#6750A4` / `#D0BCFF` |
 
-> **Note for existing users:** the original **Windows 11** theme has been renamed to **Microsoft Windows UI**. After updating, re-select it in your Profile (the old "Windows 11" name will no longer appear).
+> **Note for existing users:** two themes were renamed — **Microsoft Windows UI → Microsoft Windows 11** and **Apple HIG → Apple macOS 26**. After updating, re-select your theme in your Profile (the old names will no longer appear).
 
 ---
 
@@ -17,19 +17,19 @@ Four native Home Assistant themes that recreate the world's major UI design lang
 
 The dashboards below are built with [**Ted's Cards**](https://github.com/tedr91/HA-Teds-Cards) — set any card to `theme: ha` and it automatically follows whichever theme you've selected, so the same dashboard takes on each design language (and rides on each theme's bundled wallpaper).
 
-![Ted's Theme Collection — Microsoft Windows UI, Microsoft Fluent 2, Apple HIG and Google Material 3](images/showcase.webp)
+![Ted's Theme Collection — Microsoft Windows 11, Microsoft Fluent 2, Apple macOS 26 and Google Material 3](images/showcase.webp)
 
 <details open>
 <summary><b>Each theme — light &amp; dark</b></summary>
 
-#### Microsoft Windows UI
-![Microsoft Windows UI theme — light and dark dashboards](images/theme-microsoft-windows-ui.webp)
+#### Microsoft Windows 11
+![Microsoft Windows 11 theme — light and dark dashboards](images/theme-microsoft-windows-11.webp)
 
 #### Microsoft Fluent 2
 ![Microsoft Fluent 2 theme — light and dark dashboards](images/theme-microsoft-fluent2.webp)
 
-#### Apple HIG
-![Apple HIG theme — light and dark dashboards](images/theme-apple-hig.webp)
+#### Apple macOS 26
+![Apple macOS 26 theme — light and dark dashboards](images/theme-apple-macos-26.webp)
 
 #### Google Material 3
 ![Google Material 3 theme — light and dark dashboards](images/theme-google-material-3.webp)
@@ -46,14 +46,14 @@ The dashboards below are built with [**Ted's Cards**](https://github.com/tedr91/
 
 1. HACS → ⋮ → **Custom repositories** → add this repo's URL with category **Theme**.
 2. Find **Ted's Theme Collection** in HACS → Themes, install, then restart Home Assistant.
-3. Open your **Profile** (bottom-left avatar) and pick one of **Microsoft Windows UI**, **Microsoft Fluent 2**, **Apple HIG**, or **Google Material 3** as the theme. Set **Theme mode** to **Auto** to follow the OS.
+3. Open your **Profile** (bottom-left avatar) and pick one of **Microsoft Windows 11**, **Microsoft Fluent 2**, **Apple macOS 26**, or **Google Material 3** as the theme. Set **Theme mode** to **Auto** to follow the OS.
 
 ### Option 2 — Manual
 
 1. Copy the theme file(s) you want from [themes/](themes/) into your Home Assistant `config/themes/` folder:
-   - [themes/microsoft-windows-ui.yaml](themes/microsoft-windows-ui.yaml) — Microsoft Windows UI
+   - [themes/microsoft-windows-11.yaml](themes/microsoft-windows-11.yaml) — Microsoft Windows 11
    - [themes/microsoft-fluent2.yaml](themes/microsoft-fluent2.yaml) — Microsoft Fluent 2
-   - [themes/apple-hig.yaml](themes/apple-hig.yaml) — Apple HIG
+   - [themes/apple-macos-26.yaml](themes/apple-macos-26.yaml) — Apple macOS 26
    - [themes/google-material-3.yaml](themes/google-material-3.yaml) — Google Material 3
    - Create the `themes/` folder if it does not exist.
 2. Add the following to `configuration.yaml` (skip if you already have a `frontend:` block with `themes:`):
@@ -66,7 +66,7 @@ The dashboards below are built with [**Ted's Cards**](https://github.com/tedr91/
 3. Restart Home Assistant (**Developer Tools → YAML → Restart**, or full restart).
 4. Select your theme in your Profile as above.
 
-> **Tip:** Every theme ships its own **light + dark wallpaper**, enabled by default. The **Microsoft Windows UI** and **Apple HIG** themes use translucency, so their Mica/glass blur looks best over the wallpaper; **Microsoft Fluent 2** and **Google Material 3** keep solid, opaque cards on top. To go fully flat, set `lovelace-background` to a solid color (see Backgrounds below).
+> **Tip:** Every theme ships its own **light + dark wallpaper**, enabled by default. The **Microsoft Windows 11** and **Apple macOS 26** themes use translucency, so their Mica/glass blur looks best over the wallpaper; **Microsoft Fluent 2** and **Google Material 3** keep solid, opaque cards on top. To go fully flat, set `lovelace-background` to a solid color (see Backgrounds below).
 
 ---
 
@@ -74,7 +74,7 @@ The dashboards below are built with [**Ted's Cards**](https://github.com/tedr91/
 
 ### Dropdown row-action menus (translucent themes)
 
-This applies to the **Microsoft Windows UI** and **Apple HIG** themes, which use translucency. The **Microsoft Fluent 2** and **Google Material 3** themes are fully solid, so they are unaffected.
+This applies to the **Microsoft Windows 11** and **Apple macOS 26** themes, which use translucency. The **Microsoft Fluent 2** and **Google Material 3** themes are fully solid, so they are unaffected.
 
 Cards, dialogs (more-info, settings popups, confirmations), bottom sheets, and adaptive popovers all get real `backdrop-filter` blur because HA exposes dedicated theme variables (`--ha-card-backdrop-filter`, `--ha-dialog-surface-backdrop-filter`).
 
@@ -90,9 +90,9 @@ Every theme ships its **own light + dark wallpaper**, enabled by default and mat
 
 | Theme | Folder | Light | Dark |
 | --- | --- | --- | --- |
-| Microsoft Windows UI | [microsoft-windows-ui/](backgrounds/microsoft-windows-ui/) | smooth blue flow | liquid blue waves |
+| Microsoft Windows 11 | [microsoft-windows-11/](backgrounds/microsoft-windows-11/) | smooth blue flow | liquid blue waves |
 | Microsoft Fluent 2 | [microsoft-fluent2/](backgrounds/microsoft-fluent2/) | neutral concrete | dark-grey brushstroke |
-| Apple HIG | [apple-hig/](backgrounds/apple-hig/) | pastel waves | 3D purple/blue wave |
+| Apple macOS 26 | [apple-macos-26/](backgrounds/apple-macos-26/) | pastel waves | 3D purple/blue wave |
 | Google Material 3 | [google-material-3/](backgrounds/google-material-3/) | geometric shapes | tonal gradient |
 
 A shared library of **7 Win11-style wallpapers** also ships in [backgrounds/general/](backgrounds/general/) for use with any theme.
@@ -101,7 +101,7 @@ Wallpapers are served via the [jsDelivr CDN](https://www.jsdelivr.com/) directly
 
 ### Switching to a different bundled wallpaper
 
-Edit the theme file in [themes/](themes/) (e.g. [themes/microsoft-windows-ui.yaml](themes/microsoft-windows-ui.yaml)) and change the filename in the `lovelace-background` line under the `light:` or `dark:` block. The shared `general/` library (preview each by clicking):
+Edit the theme file in [themes/](themes/) (e.g. [themes/microsoft-windows-11.yaml](themes/microsoft-windows-11.yaml)) and change the filename in the `lovelace-background` line under the `light:` or `dark:` block. The shared `general/` library (preview each by clicking):
 
 | Filename | Mood |
 | --- | --- |
@@ -162,7 +162,7 @@ views:
 
 ## Customizing the accent color
 
-Each theme ships with its design language's signature accent (**Microsoft Windows UI** `#0078D4`, **Microsoft Fluent 2** `#0F6CBD`, **Apple HIG** `#007AFF`, **Google Material 3** `#6750A4`). To use a different accent, edit the relevant file in [themes/](themes/) — for example [themes/microsoft-windows-ui.yaml](themes/microsoft-windows-ui.yaml) — and change these in **both** the `light:` and `dark:` mode blocks:
+Each theme ships with its design language's signature accent (**Microsoft Windows 11** `#0078D4`, **Microsoft Fluent 2** `#0F6CBD`, **Apple macOS 26** `#007AFF`, **Google Material 3** `#6750A4`). To use a different accent, edit the relevant file in [themes/](themes/) — for example [themes/microsoft-windows-11.yaml](themes/microsoft-windows-11.yaml) — and change these in **both** the `light:` and `dark:` mode blocks:
 
 ```yaml
 ha-color-primary-40: '#0078D4'     # ← your accent (hex) — light mode default
@@ -193,15 +193,15 @@ Common Windows 11 accents:
 ```
 teds-themes/
 ├── themes/
-│   ├── microsoft-windows-ui.yaml   ← Microsoft Windows UI (Windows 11 / Mica)
+│   ├── microsoft-windows-11.yaml   ← Microsoft Windows 11 (Fluent / Mica)
 │   ├── microsoft-fluent2.yaml      ← Microsoft Fluent 2 (flat, solid)
-│   ├── apple-hig.yaml              ← Apple HIG (grouped, SF Pro)
+│   ├── apple-macos-26.yaml         ← Apple macOS 26 (Liquid Glass)
 │   └── google-material-3.yaml      ← Google Material 3 (tonal, Roboto)
 ├── backgrounds/                    ← wallpapers (served via jsDelivr CDN)
 │   ├── general/                    ← 7 shared Win11-style wallpapers
-│   ├── microsoft-windows-ui/       ← Windows UI light + dark
+│   ├── microsoft-windows-11/       ← Windows 11 light + dark
 │   ├── microsoft-fluent2/          ← Fluent 2 light + dark
-│   ├── apple-hig/                  ← Apple HIG light + dark
+│   ├── apple-macos-26/             ← Apple macOS 26 light + dark
 │   └── google-material-3/          ← Material 3 light + dark
 ├── design-guides/                  ← Fluent 2, Apple HIG & Material 3 reference specs
 ├── README.md
@@ -213,8 +213,8 @@ teds-themes/
 
 ## Credits
 
-- **Microsoft Windows UI** & **Microsoft Fluent 2** — color tokens & opacities derived from Microsoft's public **Fluent 2 / WinUI 3** design specifications.
-- **Apple HIG** — color, type, and shape tokens derived from Apple's public **Human Interface Guidelines** (iOS 18 / macOS Sequoia).
+- **Microsoft Windows 11** & **Microsoft Fluent 2** — color tokens & opacities derived from Microsoft's public **Fluent 2 / WinUI 3** design specifications.
+- **Apple macOS 26** — color, type, and shape tokens derived from Apple's **Human Interface Guidelines** and the macOS 26 "Tahoe" / Liquid Glass design language.
 - **Google Material 3** — color, type, and shape tokens derived from Google's public **Material Design 3 / Material You** baseline specifications.
 - Built for Home Assistant 2026.x (also compatible with earlier versions via legacy token aliases).
 
