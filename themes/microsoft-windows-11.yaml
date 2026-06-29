@@ -135,7 +135,7 @@ Microsoft Windows 11:
       # The 8 original Win11-style wallpapers now live in `backgrounds/general/`
       #   (e.g. general/RadialGradientBlue.webp | general/MountainStream.webp | …).
       # Or point at any URL / /local/... path on your HA instance.
-      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/microsoft-windows-11/microsoft-windows-11-light.webp")'
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/Teds-Themes@main/backgrounds/microsoft-windows-11/microsoft-windows-11-light.webp")'
 
       # ── HA 2026.x primary color scale (Win11 default blue at -40) ──
       ha-color-primary-05: '#001D2E'
@@ -328,7 +328,7 @@ Microsoft Windows 11:
       # ── Default dashboard wallpaper (deep-blue dark variant) ──
       # Dark-mode wallpaper in `backgrounds/microsoft-windows-11/`.
       # See the light-mode comment above for details on switching images.
-      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/microsoft-windows-11/microsoft-windows-11-dark.webp")'
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/Teds-Themes@main/backgrounds/microsoft-windows-11/microsoft-windows-11-dark.webp")'
 
       # ── HA 2026.x primary color scale (Win11 dark accent at -60) ──
       ha-color-primary-05: '#001D2E'

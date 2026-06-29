@@ -119,7 +119,7 @@ Apple macOS 26:
     light:
       # ── Default light wallpaper (soft pastel waves) ──
       # For a solid grouped canvas use '#F2F2F7' instead.
-      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/apple-macos-26/apple-macos-26-light.webp")'
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/Teds-Themes@main/backgrounds/apple-macos-26/apple-macos-26-light.webp")'
 
       # ── Apple system blue ramp ──
       ha-color-primary-05: '#002D82'
@@ -305,7 +305,7 @@ Apple macOS 26:
     dark:
       # ── Default dark wallpaper (3D purple/blue wave) ──
       # For a solid system canvas use '#000000' instead.
-      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/apple-macos-26/apple-macos-26-dark.webp")'
+      lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/Teds-Themes@main/backgrounds/apple-macos-26/apple-macos-26-dark.webp")'
 
       # ── Apple system blue ramp (shared; dark tint = blue.500 dark) ──
       ha-color-primary-05: '#002D82'

@@ -15,7 +15,7 @@ Four native Home Assistant themes that recreate the world's major UI design lang
 
 ## Preview
 
-The dashboards below are built with [**Ted's Cards**](https://github.com/tedr91/HA-Teds-Cards) — set any card to `theme: ha` and it automatically follows whichever theme you've selected, so the same dashboard takes on each design language (and rides on each theme's bundled wallpaper).
+The dashboards below are built with [**Ted's Cards**](https://github.com/tedr91/Teds-Cards) — set any card to `theme: ha` and it automatically follows whichever theme you've selected, so the same dashboard takes on each design language (and rides on each theme's bundled wallpaper).
 
 ![Ted's Theme Collection — Microsoft Windows 11, Microsoft Fluent 2, Apple macOS 26 and Google Material 3](images/showcase.webp)
 
@@ -36,7 +36,7 @@ The dashboards below are built with [**Ted's Cards**](https://github.com/tedr91/
 
 </details>
 
-> The card layouts above are visual mock-ups for illustration; install [Ted's Cards](https://github.com/tedr91/HA-Teds-Cards) to use them in your own dashboards.
+> The card layouts above are visual mock-ups for illustration; install [Ted's Cards](https://github.com/tedr91/Teds-Cards) to use them in your own dashboards.
 
 ---
 
@@ -117,7 +117,7 @@ For example to use `MountainStream.webp` in dark mode:
 
 ```yaml
 dark:
-  lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/teds-themes@main/backgrounds/general/MountainStream.webp")'
+  lovelace-background: 'center / cover no-repeat fixed url("https://cdn.jsdelivr.net/gh/tedr91/Teds-Themes@main/backgrounds/general/MountainStream.webp")'
 ```
 
 ### Using local copies (faster, works offline)
@@ -191,7 +191,7 @@ Common Windows 11 accents:
 ## File structure
 
 ```
-teds-themes/
+Teds-Themes/
 ├── themes/
 │   ├── microsoft-windows-11.yaml   ← Microsoft Windows 11 (Fluent / Mica)
 │   ├── microsoft-fluent2.yaml      ← Microsoft Fluent 2 (flat, solid)
